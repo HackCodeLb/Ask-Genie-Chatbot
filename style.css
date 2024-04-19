@@ -1,0 +1,81 @@
+/* Styling for the body */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* 100% viewport height */
+}
+/* Styling for the chat container */
+.chat-container {
+    width: 100%;
+    max-width: 400px;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+/* Styling for the chat header */
+.chat-header {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+/* Styling for the chat messages */
+.chat-messages {
+    padding: 20px;
+    height: 300px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+/* Styling for individual chat messages */
+.message {
+    padding: 10px;
+    border-radius: 20px;
+    color: #ffffff;
+    max-width: 75%;
+}
+/* Styling for user messages */
+.user {
+    background-color: #007bff;
+    align-self: flex-end;
+}
+/* Styling for genie messages */
+.genie {
+    background-color: #606060;
+    align-self: flex-start;
+}
+/* Styling for the chat form */
+.chat-form {
+    display: flex;
+    border-top: 1px solid #f0f2f5;
+}
+/* Styling for the chat input */
+.chat-input {
+    flex-grow: 1;
+    border: none;
+    padding: 20px;
+    font-size: 16px;
+}
+/* Styling for the send button */
+.send-button {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 0 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+/* Styling for focus on chat input and send button */
+.chat-input:focus, .send-button:focus {
+    outline: none;
+}
+
