@@ -61,3 +61,30 @@ function displayMessage(message, sender) {
     chatMessages.appendChild(messageDiv);
     chatMessages.scrollTop = chatMessages.scrollHeight;
 }
+
+// Event listener for voice input
+document.getElementById('voice-button').addEventListener('click', function() {
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    const chatForm = document.getElementById('chat-form');
+    if (SpeechRecognition) {
+        const recognition = new SpeechRecognition();
+        recognition.lang = 'en-US';
+        recognition.start();
+
+        recognition.onresult = function(event) {
+            const voiceText = event.results[0][0].transcript;
+            const chatInput = document.getElementById('chat-input');
+            chatInput.value = voiceText;
+            recognition.stop();
+            chatForm.dispatchEvent(new Event('submit')); // Trigger form submission
+        };
+
+        recognition.onerror = function(event) {
+            console.error('Speech recognition error', event.error);
+            displayMessage('Speech recognition error: ' + event.error, 'genie');
+        };
+    } else {
+        console.log('Speech recognition not supported in this browser.');
+        displayMessage('Speech recognition not supported.', 'genie');
+    }
+});

@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Title of the web page -->
     <title>Ask Genie</title>
-    <!-- Link to external stylesheet -->
+    <!-- Internal styles -->
     <link rel="stylesheet" href="style.css">
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <!-- Script tag for external JavaScript file with defer attribute -->
     <script src="script.js" defer></script>
-    <!-- Internal styles -->
 </head>
 <body>
 
@@ -24,6 +25,7 @@
     <form class="chat-form" id="chat-form">
         <!-- Chat input field -->
         <input type="text" class="chat-input" id="chat-input" placeholder="Type a message..." autocomplete="off">
+                    <button id="voice-button" class="voice-btn"><i class="fas fa-microphone"></i></button>
         <!-- Send button -->
         <button class="send-button">Send</button>
     </form>
