@@ -79,3 +79,27 @@ body {
     outline: none;
 }
 
+.voice-btn {
+    background-color: white; /* White color */
+    border: none;
+    color: #007BFF; /* Blue color */
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.voice-btn:hover, .voice-btn:focus {
+    background-color: #e7eef5; /* Darker white on hover/focus */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.voice-btn:active {
+    background-color: #004085; /* Even darker blue when active */
+}
+
+.voice-btn i {
+    color: #007BFF;; /* Ensures the icon is blue */
+}
+
